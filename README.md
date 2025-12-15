@@ -8,10 +8,6 @@ Our adventure began with a modest 150 Q&As on Indian law. Now, we're charging ah
 
 - **Falcon-7B & LLAMA 2**: State-of-the-art language models, prepped and ready for legal training.
 - **PEFT & QLoRA**: The dream duo for memory-efficient and high-performance model fine-tuning.
-- **[Our Dataset](https://huggingface.co/datasets/nisaar/Articles_Constitution_3300_Instruction_Set)**: Comprehensive Indian law knowledge, spanning constitutional law, civil rights, and more!
-
-## Research Paper
-![image](https://github.com/NisaarAgharia/Indian-LawyerGPT/assets/22457544/6bc73d7a-c19b-41d6-ae20-3a5787644001)
 
 
 ## Dataset Creation
@@ -34,3 +30,4 @@ https://huggingface.co/datasets/nisaar/LLAMA2_Legal_Dataset_4.4k_Instructions
 ## Track the Progress
 
 Get a front-row seat to the training progress with TensorBoard. Kickstart it, navigate to the provided localhost link, and witness the models learn:
+
