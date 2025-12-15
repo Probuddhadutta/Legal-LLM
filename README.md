@@ -1,73 +1,36 @@
-# React + TypeScript + Vite
+# Indian Law AI: Fine-Tuning Falcon-7B & LLAMA 2 Language Models
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to our exciting project where we are adapting two cutting-edge language models, Falcon-7B & LLAMA 2, to become proficient in Indian law. 
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Our adventure began with a modest 150 Q&As on Indian law. Now, we're charging ahead with an impressive dataset of 3300 instructions! This AI legal project combines:
 
-## React Compiler
+- **Falcon-7B & LLAMA 2**: State-of-the-art language models, prepped and ready for legal training.
+- **PEFT & QLoRA**: The dream duo for memory-efficient and high-performance model fine-tuning.
+- **[Our Dataset](https://huggingface.co/datasets/nisaar/Articles_Constitution_3300_Instruction_Set)**: Comprehensive Indian law knowledge, spanning constitutional law, civil rights, and more!
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Research Paper
+![image](https://github.com/NisaarAgharia/Indian-LawyerGPT/assets/22457544/6bc73d7a-c19b-41d6-ae20-3a5787644001)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Dataset Creation
+<img width="2624" alt="Dataset Creation (3)" src="https://github.com/NisaarAgharia/Indian-LawyerGPT/assets/22457544/75d1b1a6-d467-4b94-b0b6-c09dde758a86">
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Dive into our Dataset
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Our dataset is designed with four key features: `instruction`, `input`, `output`, and `prompt`. Crafted to shape our models into AI law experts!
+Dataset on Hugging Face : 
+https://huggingface.co/datasets/nisaar/Constitution_Of_India_Instruction_Set
+https://huggingface.co/datasets/nisaar/Articles_Constitution_3300_Instruction_Set
+https://huggingface.co/datasets/nisaar/LLAMA2_Legal_Dataset_4.4k_Instructions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Fine Tuning Process
+<img width="2608" alt="Fine Tuning" src="https://github.com/NisaarAgharia/Indian-LawyerGPT/assets/22457544/d08c4d51-0e5e-4cff-9fec-7d7a53959143">
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+## Track the Progress
+
+Get a front-row seat to the training progress with TensorBoard. Kickstart it, navigate to the provided localhost link, and witness the models learn:
